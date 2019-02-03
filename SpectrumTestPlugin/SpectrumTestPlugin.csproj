@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6bf6f5dd-cf43-4483-af25-a9bf33d40377</ProjectGuid>
+    <ProjectGuid>{6BF6F5DD-CF43-4483-AF25-A9BF33D40377}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SpectrumTestPlugin</RootNamespace>
@@ -30,20 +30,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Steam\steamapps\common\Distance\Distance_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spectrum.API">
+      <HintPath>D:\Steam\steamapps\common\Distance\Distance_Data\Spectrum\Spectrum.API.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Steam\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="SpectrumSettingsMenu.cs" />
+    <Compile Include="UI\OptionsSubmenu\MainOptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\OptionsSubmenuButton.cs" />
+    <Compile Include="UI\OptionsSubmenu\PauseOptionsSubmenuButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\SpectrumMenu.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
