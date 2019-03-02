@@ -13,7 +13,7 @@ namespace SpectrumTestPlugin.UI
 
         public SpectrumMenu()
         {
-            menuBlueprint_ = Util.FindByName("SuperMenuBlueprint");
+            menuBlueprint_ = Menu.menuBlueprint;
         }
         
         public void SetManager(IManager manager)
